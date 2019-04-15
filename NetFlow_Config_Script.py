@@ -89,7 +89,7 @@ elif "IOS" in version_line:
             continue
         interface = line.split()[0]
         config.append("interface " + interface)
-        config.append(" ip flow monitor Campus_NetFlow sampler MONITOR_NAME_HERE input")
+        config.append(" ip flow monitor MONITOR_NAME_HERE sampler SAMPLER_NAME_HERE input")
         config.append("!")
     "\n".join(config)
     connect.send_config_set(config)
